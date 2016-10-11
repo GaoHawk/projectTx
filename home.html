@@ -13,6 +13,8 @@
 
 		<script src="js/browser.js"></script>
 		<script src="js/jQuery-2.2.1.min.js"></script>
+		<script src="firstPage.es5.js"></script>
+		<script src="secondPage.es5.js"></script>
 		<script type="text/babel">
 
 		</script>
@@ -54,6 +56,9 @@
 			.oa-contact-name, oa-contact-position {
 				float: left;
 			}
+			.custom-nav-shadow{
+				box-shadow: 0 0 0px rgba(0,0,0,0);
+			}
 		</style>
 	</head>
 
@@ -61,55 +66,41 @@
 		<header class="mui-bar mui-bar-nav">
 			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
 			<h1 class="mui-title">底部选项卡-div模式</h1>
+			<a class="mui-icon mui-icon-bars mui-pull-right mui-tab-item" href="#tabbar-with-contact"></a>
 		</header>
-		<nav class="mui-bar mui-bar-tab">
+		<nav class="mui-bar mui-bar-tab custom-nav-shadow" >
 			<a class="mui-tab-item mui-active" href="#tabbar">
 				<span class="mui-icon mui-icon-home"></span>
 				<span class="mui-tab-label">首页</span>
 			</a>
 			<a class="mui-tab-item" href="#tabbar-with-chat">
-				<span class="mui-icon mui-icon-email"><span class="mui-badge">9</span></span>
-				<span class="mui-tab-label">消息</span>
+				<span class="mui-icon mui-icon-upload"></span>
+				<span class="mui-tab-label">礼包</span>
 			</a>
 			<a class="mui-tab-item" href="#tabbar-with-contact">
-				<span class="mui-icon mui-icon-contact"></span>
-				<span class="mui-tab-label">通讯录</span>
+				<span class="mui-icon mui-icon-pengyouquan"></span>
+				<span class="mui-tab-label">游戏</span>
 			</a>
 			<a class="mui-tab-item" href="#tabbar-with-map">
-				<span class="mui-icon mui-icon-gear"></span>
-				<span class="mui-tab-label">设置</span>
+				<span class="mui-icon mui-icon-chatbubble"></span>
+				<span class="mui-tab-label">咨询</span>
+			</a>
+			<a class="mui-tab-item" href="#">
+				<span class="mui-icon mui-icon-star"></span>
+				<span class="mui-tab-label">推荐</span>
 			</a>
 		</nav>
 		<div class="mui-content">
 			<div id="tabbar" class="mui-control-content mui-active">
-
+			<script>
+				$("#tabbar").append(html);
+			</script>
 
 			</div>
 			<div id="tabbar-with-chat" class="mui-control-content">
-				<div class="title">这是div模式选项卡中的第2个子页面，该页面展示一个消息列表</div>
-
-				<ul class="mui-table-view mui-table-view-chevron">
-					<li class="mui-table-view-cell"><a href="" class="mui-navigate-right">Item 1</a></li>
-					<li class="mui-table-view-cell"><a href="" class="mui-navigate-right">Item 2</a></li>
-					<li class="mui-table-view-cell"><a href="" class="mui-navigate-right">Item 3</a></li>
-					<li class="mui-table-view-cell"><a href="" class="mui-navigate-right">Item 4</a></li>
-					<li class="mui-table-view-cell"><a href="" class="mui-navigate-right">Item 5</a></li>
-					<li class="mui-table-view-cell"><a href="" class="mui-navigate-right">Item 6</a></li>
-					<li class="mui-table-view-cell"><a href="" class="mui-navigate-right">Item 7</a></li>
-					<li class="mui-table-view-cell"><a href="" class="mui-navigate-right">Item 8</a></li>
-					<li class="mui-table-view-cell"><a href="" class="mui-navigate-right">Item 9</a></li>
-					<li class="mui-table-view-cell"><a href="" class="mui-navigate-right">Item 10</a></li>
-					<li class="mui-table-view-cell"><a href="" class="mui-navigate-right">Item 11</a></li>
-					<li class="mui-table-view-cell"><a href="" class="mui-navigate-right">Item 12</a></li>
-					<li class="mui-table-view-cell"><a href="" class="mui-navigate-right">Item 13</a></li>
-					<li class="mui-table-view-cell"><a href="" class="mui-navigate-right">Item 14</a></li>
-					<li class="mui-table-view-cell"><a href="" class="mui-navigate-right">Item 15</a></li>
-					<li class="mui-table-view-cell"><a href="" class="mui-navigate-right">Item 16</a></li>
-					<li class="mui-table-view-cell"><a href="" class="mui-navigate-right">Item 17</a></li>
-					<li class="mui-table-view-cell"><a href="" class="mui-navigate-right">Item 18</a></li>
-					<li class="mui-table-view-cell"><a href="" class="mui-navigate-right">Item 19</a></li>
-					<li class="mui-table-view-cell"><a href="" class="mui-navigate-right">Item 20</a></li>
-				</ul>
+				<script>
+					$("#tabbar-with-chat").append(html2);
+				</script>
 
 			</div>
 			<div id="tabbar-with-contact" class="mui-control-content">
@@ -248,5 +239,87 @@
 		mui.init({
 			swipeBack:true //启用右滑关闭功能
 		});
+		// 内容
+		var eleContents = $("div.mui-control-content");
+		//选项卡 标签
+		var abtns = $("a.mui-tab-item");
+		var eleMenus = abtns.bind("tap", function(event){
+			console.log($(this)[0].hash);
+			var query = $(this)[0].hash.slice(1);
+			var title = "pjax跳转" + query;
+			document.title = title;
+
+
+			for (var i = 0; i < abtns.length; i++) {
+				if($(abtns[i]).hasClass('mui-active')){
+					$(abtns[i]).removeClass('mui-active');
+				}
+			}
+			$(this).addClass('mui-active');
+			if (event) {
+			for (var i = 0; i < eleContents.length; i++) {
+				if(eleContents[i].id == query){
+					$(eleContents[i]).show();
+
+				}else{
+
+					$(eleContents[i]).hide();
+				}
+			}
+			  history.pushState({ title: title }, title, location.href.split("?")[0] + "?" + query);
+			}
+			return false;
+		});
+
+		var fnHashTrigger = function(target){
+			var query = location.href.split("?")[1], eleTarget = target || null;
+			console.log(query);
+			console.log(eleTarget);
+			if (typeof query == "undefined") {
+			  // if (eleTarget = eleMenus.get(0)) {
+			  //   history.replaceState(null, document.title, location.href.split("#")[0] + "?" + eleTarget.href.split("?")[1]) + location.hash;
+			  //   fnHashTrigger(eleTarget);
+			  // }
+			  eleTarget = abtns[0];
+			  history.replaceState(null,document.title,location.href.split("#")[0] + "?" + eleTarget.hash.slice(1));
+			  fnHashTrigger(eleTarget);
+			} else {
+
+				for (var i = 0; i < eleContents.length; i++) {
+					if(eleContents[i].id == query){
+						console.log(eleContents[i]);
+						$(eleContents[i]).show();
+					}else{
+						$(eleContents[i]).hide();
+					}
+				}
+				// if(eleTarget){
+				// 	console.log(4);
+				// 	$(eleTarget).click();
+				// }
+			  // eleMenus.each(function() {
+			  //   if (eleTarget === null && this.href.split("?")[1] === query) {
+			  //     eleTarget = this;
+			  //   }
+			  // });
+
+			  // if (!eleTarget) {
+			  //   history.replaceState(null, document.title, location.href.split("?")[0]);
+			  //   fnHashTrigger();
+			  // } else {
+			  //   $(eleTarget).trigger("click");
+			  // }
+			}
+		}
+
+		if (history.pushState) {
+		  window.addEventListener("popstate", function() {
+		    fnHashTrigger();
+		    console.log(1);
+		  });
+		  console.log(2);
+		  // 默认载入
+		  // fnHashTrigger();
+		}
 	</script>
 </html>
