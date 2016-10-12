@@ -1,0 +1,46 @@
+/*body{
+	margin:0px;
+	padding: 0px;
+    background: #fff;
+    font: 26px \5FAE\8F6F\96C5\9ED1,Helvetica;
+    color: #333;
+    overflow: visible;
+}
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+}*/
+.rm2_banner{
+	width: 90%;
+	overflow: hidden;
+	margin:3% auto;
+}
+/*a.btn-lblq img,{
+	width: 100%;
+}*/
+.btn-lblq{
+	width: 45%;
+    overflow: hidden;
+    margin-right: 10%;
+}
+.btn-yxxz{
+	width: 45%;
+    overflow: hidden;
+    margin-right: 0%;
+}
+.f1{
+	float: left;
+}
+a.btn-lblq img, a.btn-yxxz img{
+	width: 100%;
+}
+/*img{
+	width: 100%;
+}*/
+.rm3_banner {
+    width: 90%;
+    margin: 0 auto 1%;
+    line-height: 150%;
+    overflow: hidden;
+}

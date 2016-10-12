@@ -11,13 +11,15 @@
 		<!--标准mui.css-->
 		<!-- <link rel="stylesheet" href="css/MUI.min.css"> -->
 		<link rel="stylesheet" href="css/Style.css">
+		<link rel="stylesheet" href="css/app.css">
+		<link rel="stylesheet" href="css/recommend.css">
 		<script src="js/browser.js"></script>
 		<script src="js/jQuery-2.2.1.min.js"></script>
 		<script src="firstPage.es5.js"></script>
 		<script src="secondPage.es5.js"></script>
 		<script src="userCenter.es5.js"></script>
 		<script src="userReg.es5.js"></script>
-
+		<script src="recommend.es5.js"></script>
 		<script type="text/babel">
 
 		</script>
@@ -250,7 +252,7 @@
 				<span class="mui-icon mui-icon-chatbubble"></span>
 				<span class="mui-tab-label">咨询</span>
 			</a>
-			<a class="mui-tab-item" href="#tabbar-with-map">
+			<a class="mui-tab-item" href="#tabbar-recommend">
 				<span class="mui-icon mui-icon-star"></span>
 				<span class="mui-tab-label">推荐</span>
 			</a>
@@ -277,6 +279,11 @@
 					$("#tabbar-with-chat").append(html2);
 				</script>
 
+			</div>
+			<div id="tabbar-recommend" class="mui-control-content">
+				<script>
+					$("#tabbar-recommend").append(recoommend);
+				</script>
 			</div>
 			<div id="tabbar-with-contact" class="mui-control-content">
 				<div class="title">这是div模式选项卡中的第3个子页面，该页面展示一个通讯录示例.</div>
@@ -415,6 +422,11 @@
 	<script>
 		mui.init({
 			swipeBack:true //启用右滑关闭功能
+		});
+
+		var gallery = mui('.mui-slider');
+		gallery.slider({
+		  interval:5000//自动轮播周期，若为0则不自动播放，默认为0；
 		});
 		//页面 模板功能 模块切开
 		// 内容
