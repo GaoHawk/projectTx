@@ -59,14 +59,69 @@
 			.custom-nav-shadow{
 				box-shadow: 0 0 0px rgba(0,0,0,0);
 			}
+			a.logo_sy{
+				width: 20%;
+				overflow: hidden;
+				left: 2%;
+				top: 18%;
+			}
+			.pa{
+				position: absolute;
+			}
+			.rel{
+				position:relative;
+			}
+			.bl{
+				display: inline-block;
+			}
+			a.logo_sy img{
+				width: 100%;
+			}
+			.userdiv{
+				width:39%;
+				padding:1% .75%;
+				right: 2%;
+			}
+			.userName{
+				width: 98%;
+				height: 76%;
+				bottom: 20%;
+			}
+			span.conHeight{
+				top: 32%;
+				left:1%;
+				font-size: 13px;
+			}
+			.customColor{
+				color:grey;
+			}
+			div.userdiv:before{
+				content:"";
+				border-left: 0.3px dotted rgba(132, 125, 125, 0.43);
+				height: 30px;
+				position: relative;
+				top:5px;
+				display: inline-block;
+
+			}
 		</style>
 	</head>
 
 	<body>
 		<header class="mui-bar mui-bar-nav">
-			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-			<h1 class="mui-title">底部选项卡-div模式</h1>
-			<a class="mui-icon mui-icon-bars mui-pull-right mui-tab-item" href="#tabbar-with-contact"></a>
+			<a class="mui-pull-left logo_sy db pa">
+				<img src="images/54ab7990ba321.png" >
+			</a>
+			<div class="userdiv pa">
+				<a class="mui-icon mui-icon-contact mui-tab-item" href="#tabbar-with-contact">
+
+				</a>
+				<a class="mui-tab-item pa bl userName customColor" href="#tabbar-with-contact">
+					<span class="bl rel conHeight">用户中心</span>
+				</a>
+
+			</div>
+
 		</header>
 		<nav class="mui-bar mui-bar-tab custom-nav-shadow" >
 			<a class="mui-tab-item mui-active" href="#tabbar">
@@ -85,7 +140,7 @@
 				<span class="mui-icon mui-icon-chatbubble"></span>
 				<span class="mui-tab-label">咨询</span>
 			</a>
-			<a class="mui-tab-item" href="#">
+			<a class="mui-tab-item" href="#tabbar-with-map">
 				<span class="mui-icon mui-icon-star"></span>
 				<span class="mui-tab-label">推荐</span>
 			</a>
@@ -243,6 +298,10 @@
 		var eleContents = $("div.mui-control-content");
 		//选项卡 标签
 		var abtns = $("a.mui-tab-item");
+		var query = abtns[1].hash.slice(1);
+		var title = "pjax跳转" + query;
+		document.title = title;
+		history.pushState({ title: title }, title, location.href.split("?")[0] + "?" + query);
 		var eleMenus = abtns.bind("tap", function(event){
 			console.log($(this)[0].hash);
 			var query = $(this)[0].hash.slice(1);
@@ -257,13 +316,13 @@
 			}
 			$(this).addClass('mui-active');
 			if (event) {
-			for (var i = 0; i < eleContents.length; i++) {
-				if(eleContents[i].id == query){
-					$(eleContents[i]).show();
+			for (var j = 0; j < eleContents.length; j++) {
+				if(eleContents[j].id == query){
+					$(eleContents[j]).show();
 
 				}else{
 
-					$(eleContents[i]).hide();
+					$(eleContents[j]).hide();
 				}
 			}
 			  history.pushState({ title: title }, title, location.href.split("?")[0] + "?" + query);
@@ -275,19 +334,29 @@
 			var query = location.href.split("?")[1], eleTarget = target || null;
 			console.log(query);
 			console.log(eleTarget);
-			if (typeof query == "undefined") {
+			if ( typeof query == "undefined"    || query.length <= 0) {
 			  // if (eleTarget = eleMenus.get(0)) {
 			  //   history.replaceState(null, document.title, location.href.split("#")[0] + "?" + eleTarget.href.split("?")[1]) + location.hash;
 			  //   fnHashTrigger(eleTarget);
 			  // }
-			  eleTarget = abtns[0];
-			  history.replaceState(null,document.title,location.href.split("#")[0] + "?" + eleTarget.hash.slice(1));
+			  eleTarget = abtns[1];
+			  console.log(eleTarget);
+			  history.replaceState(null,document.title,location.href.split("#")[0] + "?"  + eleTarget.hash.slice(1));
 			  fnHashTrigger(eleTarget);
 			} else {
-
+				console.log(abtns);
 				for (var i = 0; i < eleContents.length; i++) {
 					if(eleContents[i].id == query){
-						console.log(eleContents[i]);
+						// console.log(eleContents[i]);
+						for (var j = 0; j < abtns.length; j++) {
+							if($(abtns[j]).hasClass('mui-active') ){
+								$(abtns[j]).removeClass('mui-active');
+							}
+							if(abtns[j].hash.slice(1) == query){
+								$(abtns[j]).addClass('mui-active');
+							}
+						}
+
 						$(eleContents[i]).show();
 					}else{
 						$(eleContents[i]).hide();
@@ -317,9 +386,8 @@
 		    fnHashTrigger();
 		    console.log(1);
 		  });
-		  console.log(2);
 		  // 默认载入
-		  // fnHashTrigger();
+		  fnHashTrigger();
 		}
 	</script>
 </html>
