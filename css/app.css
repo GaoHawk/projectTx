@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2016-10-12 16:15:35
 * @Last Modified by:   Administrator
-* @Last Modified time: 2016-10-12 16:15:49
+* @Last Modified time: 2016-10-12 17:04:13
 */
 .mui-plus.mui-android .mui-bar-nav~.mui-content{
   padding: 0;
@@ -18,7 +18,7 @@
     white-space: normal;
 }
 .mui-slider-indicator .mui-indicator {
-    display: inline-block;
+/*    display: inline-block;
     width: 34px;
     height: 34px;
     margin: 1px 6px;
@@ -27,4 +27,4 @@
     background: #aaa;
     -webkit-box-shadow: 0 0 1px 1px rgba(130,130,130,.7);
     box-shadow: 0 0 1px 1px rgba(130,130,130,.7);
-}
+*/}
