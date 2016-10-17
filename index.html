@@ -1,0 +1,636 @@
+﻿
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<!--mui.css-->
+		<!-- <link rel="stylesheet" href="css/MUI.min.css"> -->
+		<link rel="stylesheet" href="css/Style.css">
+		<link rel="stylesheet" href="css/app.css">
+		<link rel="stylesheet" href="css/recommend.css">
+		<script src="js/browser.js"></script>
+		<script src="js/jQuery-2.2.1.min.js"></script>
+		<script src="homePage.es5.js"></script>
+		<script src="homePage2.es5.js"></script>
+		<script src="homePage3.es5.js"></script>
+		<!-- <script src="secondPage.es5.js"></script> -->
+		<script src="userCenter.es5.js"></script>
+		<script src="userReg.es5.js"></script>
+		<script src="recommend.es5.js"></script>
+		<script type="text/babel">
+
+		</script>
+		<style>
+			.mui-plus.mui-android header.mui-bar{
+			  display: none;
+			}
+			.mui-plus.mui-android .mui-bar-nav~.mui-content{
+			  padding: 0;
+			}
+			.title{
+				margin: 20px 15px 10px;
+				color: #6d6d72;
+				font-size: 15px;
+			}
+
+			.oa-contact-cell.mui-table .mui-table-cell {
+				padding: 11px 0;
+				vertical-align: middle;
+			}
+
+			.oa-contact-cell {
+				position: relative;
+				margin: -11px 0;
+			}
+
+			.oa-contact-avatar {
+				width: 75px;
+			}
+			.oa-contact-avatar img {
+				border-radius: 50%;
+			}
+			.oa-contact-content {
+				width: 100%;
+			}
+			.oa-contact-name {
+				margin-right: 20px;
+			}
+			.oa-contact-name, oa-contact-position {
+				float: left;
+			}
+			.custom-nav-shadow{
+				box-shadow: 0 0 0px rgba(0,0,0,0);
+			}
+			a.logo_sy{
+				width: 20%;
+				overflow: hidden;
+				left: 2%;
+				top: 18%;
+			}
+			.pa{
+				position: absolute;
+			}
+			.rel{
+				position:relative;
+			}
+			.bl{
+				display: inline-block;
+			}
+			a.logo_sy img{
+				width: 100%;
+			}
+			.userdiv{
+				width:39%;
+				padding:1% .75%;
+				right: 2%;
+				top: 0;
+			}
+			.userName{
+				width: 98%;
+				height: 76%;
+				bottom: 20%;
+			}
+			span.conHeight{
+				top: 32%;
+				left:1%;
+				font-size: 13px;
+			}
+			.customColor{
+				color:grey;
+			}
+			div.userdiv:before{
+				content:"";
+				border-left: 0.3px dotted rgba(132, 125, 125, 0.43);
+				height: 30px;
+				position: relative;
+				top:5px;
+				display: inline-block;
+			}
+			.area {
+				margin: 20px auto 0px auto;
+			}
+
+			.mui-input-group {
+				margin-top: 10px;
+			}
+
+			.mui-input-group:first-child {
+				margin-top: 20px;
+			}
+
+			.mui-input-group label {
+				width: 22%;
+			}
+
+			.mui-input-row label~input,
+			.mui-input-row label~select,
+			.mui-input-row label~textarea {
+				width: 78%;
+			}
+
+			.mui-checkbox input[type=checkbox],
+			.mui-radio input[type=radio] {
+				top: 6px;
+			}
+
+			.mui-content-padded {
+				margin-top: 25px;
+			}
+
+			.mui-btn {
+				padding: 10px;
+			}
+
+			.link-area {
+				display: block;
+				margin-top: 25px;
+				text-align: center;
+			}
+
+			.spliter {
+				color: #bbb;
+				padding: 0px 8px;
+			}
+
+			.oauth-area {
+				position: absolute;
+				bottom: 20px;
+				left: 0px;
+				text-align: center;
+				width: 100%;
+				padding: 0px;
+				margin: 0px;
+			}
+
+			.oauth-area .oauth-btn {
+				display: inline-block;
+				width: 50px;
+				height: 50px;
+				background-size: 30px 30px;
+				background-position: center center;
+				background-repeat: no-repeat;
+				margin: 0px 20px;
+				/*-webkit-filter: grayscale(100%); */
+				border: solid 1px #ddd;
+				border-radius: 25px;
+			}
+
+			.oauth-area .oauth-btn:active {
+				border: solid 1px #aaa;
+			}
+
+			.oauth-area .oauth-btn.disabled {
+				background-color: #ddd;
+			}
+
+			.area {
+				margin: 20px auto 0px auto;
+			}
+			.mui-input-group:first-child {
+				margin-top: 20px;
+			}
+			.mui-input-group label {
+				width: 22%;
+			}
+			.mui-input-row label~input,
+			.mui-input-row label~select,
+			.mui-input-row label~textarea {
+				width: 78%;
+			}
+			.mui-checkbox input[type=checkbox],
+			.mui-radio input[type=radio] {
+				top: 6px;
+			}
+			.mui-content-padded {
+				margin-top: 25px;
+			}
+			.mui-btn {
+				padding: 10px;
+			}
+			#navi ul li{
+				width: 31.03%;
+				display: inline-table;
+				text-align: center;
+				margin-bottom: 10px;
+				list-style: none;
+			}
+			#navi a {
+				 display: inline-block;
+				 height: 72px; width: 72px;
+			 	 padding-top: 72px;
+		 	 	 background:url(images/57e09a1a0e32d.png) no-repeat;
+				 background-position: 50% 50%;
+				 background-size:contain ;
+			}
+			#navi a span{
+				 display: block; color: #000;
+				 font-size: 14px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<div id="mainPage" style="display: inline-block;">
+				<a class="mui-pull-left logo_sy db pa">
+					<img src="images/54ab7990ba321.png" >
+				</a>
+				<div class="userdiv pa">
+					<a class="mui-icon mui-icon-contact mui-tab-item" href="#userCenter">
+
+					</a>
+					<a class="mui-tab-item pa bl userName customColor" href="#userCenter">
+						<span class="bl rel conHeight">用户中心</span>
+					</a>
+				</div>
+			</div>
+
+			<div id="userPage" style="display: none;">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" ></a>
+				<h1 class="mui-title">注册登陆</h1>
+			</div>
+
+		</header>
+		<nav class="mui-bar mui-bar-tab custom-nav-shadow" >
+			<a class="mui-tab-item mui-active" href="#tabbar">
+				<span class="mui-icon mui-icon-home"></span>
+				<span class="mui-tab-label">首页</span>
+			</a>
+			<a class="mui-tab-item" href="#tabbar-with-chat">
+				<span class="mui-icon mui-icon-upload"></span>
+				<span class="mui-tab-label">礼包</span>
+			</a>
+			<a class="mui-tab-item" href="#tabbar-with-contact">
+				<span class="mui-icon mui-icon-pengyouquan"></span>
+				<span class="mui-tab-label">游戏</span>
+			</a>
+			<a class="mui-tab-item" href="#tabbar-with-map">
+				<span class="mui-icon mui-icon-chatbubble"></span>
+				<span class="mui-tab-label">咨询</span>
+			</a>
+			<a class="mui-tab-item" href="#tabbar-recommend">
+				<span class="mui-icon mui-icon-star"></span>
+				<span class="mui-tab-label">推荐</span>
+			</a>
+		</nav>
+		<div class="mui-content">
+			<div id="userCenter" class="mui-control-content">
+				<script>
+					$("#userCenter").append(userHtml);
+				</script>
+			</div>
+			<div id="userReg" class="mui-control-content">
+				<script>
+					$("#userReg").append(reg);
+				</script>
+			</div>
+			<div id="tabbar" class="mui-control-content mui-active">
+			<script>
+				$("#tabbar").append(html1);
+			</script>
+
+			</div>
+			<div id="tabbar-with-chat" class="mui-control-content">
+				<script>
+					$("#tabbar-with-chat").append(html2);
+				</script>
+
+			</div>
+			<div id="tabbar-recommend" class="mui-control-content">
+				<script>
+					$("#tabbar-recommend").append(recoommend);
+				</script>
+			</div>
+			<div id="tabbar-with-contact" class="mui-control-content">
+				<script>
+					$("#tabbar-with-contact").append(html3);
+				</script>
+			</div>
+			<div id="tabbar-with-map" class="mui-control-content">
+				<script>
+					$("#tabbar-with-map").append(html1);
+				</script>
+			</div>
+		</div>
+	</body>
+	<script src="js/MUI.min.js"></script>
+	<script src="js/mui.enterfocus.js"></script>
+	<script src="js/app.js"></script>
+	<script>
+		mui.init({
+			swipeBack:true //
+		});
+
+		// var gallery = mui('.mui-slider');
+		// gallery.slider({
+		//   interval:5000//
+		// });
+		//
+
+		var eleContents = $("div.mui-control-content");
+
+		var userHeader = $("header.mui-bar.mui-bar-nav");
+
+		var abtns = $("a.mui-tab-item");
+		var query = abtns[2].hash.slice(1);
+		var title = "pjax" + query;
+		document.title = title;
+		history.pushState({ title: title }, title, location.href.split("?")[0] + "?" + query);
+		var eleMenus = abtns.bind("tap", function(event){
+			console.log($(this)[0].hash);
+			var query = $(this)[0].hash.slice(1);
+			var title = "pjax" + query;
+			document.title = title;
+
+
+			for (var i = 0; i < abtns.length; i++) {
+				if($(abtns[i]).hasClass('mui-active')){
+					$(abtns[i]).removeClass('mui-active');
+				}
+			}
+			$(this).addClass('mui-active');
+			if (event) {
+			for (var j = 0; j < eleContents.length; j++) {
+				if(eleContents[j].id == query){
+					$(eleContents[j]).show();
+
+				}else{
+
+					$(eleContents[j]).hide();
+				}
+			}
+			  history.pushState({ title: title }, title, location.href.split("?")[0] + "?" + query);
+			}
+			return false;
+		});
+
+		var fnHashTrigger = function(target){
+			var query = location.href.split("?")[1], eleTarget = target || null;
+			console.log(query);
+			console.log(eleTarget);
+			if ( typeof query == "undefined"    || query.length <= 0) {
+			  // if (eleTarget = eleMenus.get(0)) {
+			  //   history.replaceState(null, document.title, location.href.split("#")[0] + "?" + eleTarget.href.split("?")[1]) + location.hash;
+			  //   fnHashTrigger(eleTarget);
+			  // }
+			  eleTarget = abtns[2];
+			  console.log(eleTarget);
+			  history.replaceState(null,document.title,location.href.split("#")[0] + "?"  + eleTarget.hash.slice(1));
+			  fnHashTrigger(eleTarget);
+			} else {
+				console.log(abtns);
+				// console.log(query);
+				if(query.indexOf('user') > -1){
+					console.log("userPage");
+					$("#mainPage").hide();
+					$("#userPage").show();
+				}else{
+					console.log("mainPage");
+					console.log($("#mainPage"));
+					$("#mainPage").show();
+					$("#userPage").hide();
+				}
+				for (var i = 0; i < eleContents.length; i++) {
+					if(eleContents[i].id == query){
+						// console.log(eleContents[i]);
+						for (var j = 0; j < abtns.length; j++) {
+							if($(abtns[j]).hasClass('mui-active') ){
+								$(abtns[j]).removeClass('mui-active');
+							}
+							if(abtns[j].hash.slice(1) == query){
+								$(abtns[j]).addClass('mui-active');
+							}
+						}
+
+						$(eleContents[i]).show();
+					}else{
+						$(eleContents[i]).hide();
+					}
+				}
+				// if(eleTarget){
+				// 	console.log(4);
+				// 	$(eleTarget).click();
+				// }
+			  // eleMenus.each(function() {
+			  //   if (eleTarget === null && this.href.split("?")[1] === query) {
+			  //     eleTarget = this;
+			  //   }
+			  // });
+
+			  // if (!eleTarget) {
+			  //   history.replaceState(null, document.title, location.href.split("?")[0]);
+			  //   fnHashTrigger();
+			  // } else {
+			  //   $(eleTarget).trigger("click");
+			  // }
+			}
+		}
+
+		if (history.pushState) {
+		  window.addEventListener("popstate", function() {
+		    fnHashTrigger();
+		  });
+
+		  fnHashTrigger();
+		}
+
+
+
+		var regButton = document.getElementById('reg');
+
+
+		regButton.addEventListener("tap",function(event){
+			$("#mainPage").hide();
+			$("#userPage").show();
+		});
+
+
+
+		(function($, doc) {
+			console.log(doc);
+			$.init({
+				statusBarBackground: '#f7f7f7'
+			});
+			$.plusReady(function() {
+				plus.screen.lockOrientation("portrait-primary");
+				var settings = app.getSettings();
+				var state = app.getState();
+				var mainPage = $.preload({
+					"id": 'main',
+					"url": 'main.html'
+				});
+				var main_loaded_flag = false;
+				mainPage.addEventListener("loaded",function () {
+					main_loaded_flag = true;
+				});
+				var toMain = function() {
+
+					var id = setInterval(function () {
+						if(main_loaded_flag){
+							clearInterval(id);
+							$.fire(mainPage, 'show', null);
+							mainPage.show("pop-in");
+						}
+					},20);
+				};
+				//
+				if (settings.autoLogin && state.token && settings.gestures) {
+					$.openWindow({
+						url: 'unlock.html',
+						id: 'unlock',
+						show: {
+							aniShow: 'pop-in'
+						},
+						waiting: {
+							autoShow: false
+						}
+					});
+				} else if (settings.autoLogin && state.token) {
+					toMain();
+				} else {
+					app.setState(null);
+					//
+					var authBtns = ['qihoo', 'weixin', 'sinaweibo', 'qq']; //
+					var auths = {};
+					var oauthArea = doc.querySelector('.oauth-area');
+					plus.oauth.getServices(function(services) {
+						for (var i in services) {
+							var service = services[i];
+							auths[service.id] = service;
+							if (~authBtns.indexOf(service.id)) {
+								var isInstalled = app.isInstalled(service.id);
+								var btn = document.createElement('div');
+								//
+								btn.setAttribute('class', 'oauth-btn' + (!isInstalled && service.id === 'weixin' ? (' disabled') : ''));
+								btn.authId = service.id;
+								btn.style.backgroundImage = 'url("images/' + service.id + '.png")'
+								oauthArea.appendChild(btn);
+							}
+						}
+						$(oauthArea).on('tap', '.oauth-btn', function() {
+							if (this.classList.contains('disabled')) {
+								plus.nativeUI.toast('');
+								return;
+							}
+							var auth = auths[this.authId];
+							var waiting = plus.nativeUI.showWaiting();
+							auth.login(function() {
+								waiting.close();
+								plus.nativeUI.toast("");
+								auth.getUserInfo(function() {
+									plus.nativeUI.toast("");
+									var name = auth.userInfo.nickname || auth.userInfo.name;
+									app.createState(name, function() {
+										toMain();
+									});
+								}, function(e) {
+									plus.nativeUI.toast("" + e.message);
+								});
+							}, function(e) {
+								waiting.close();
+								plus.nativeUI.toast("" + e.message);
+							});
+						});
+					}, function(e) {
+						oauthArea.style.display = 'none';
+						plus.nativeUI.toast("" + e.message);
+					});
+				}
+				// close splash
+				setTimeout(function() {
+					// splash
+					plus.navigator.closeSplashscreen();
+				}, 600);
+				//
+				var loginButton = doc.getElementById('login');
+				var accountBox = doc.getElementById('account');
+				var passwordBox = doc.getElementById('password');
+				var autoLoginButton = doc.getElementById("autoLogin");
+				var regButton = doc.getElementById('reg');
+				regButton.addEventListener("tap",function(event){
+					 console.log(event)
+				});
+				var forgetButton = doc.getElementById('forgetPassword');
+				loginButton.addEventListener('tap', function(event) {
+					var loginInfo = {
+						account: accountBox.value,
+						password: passwordBox.value
+					};
+					app.login(loginInfo, function(err) {
+						if (err) {
+							plus.nativeUI.toast(err);
+							return;
+						}
+						toMain();
+					});
+				});
+				$.enterfocus('#login-form input', function() {
+					$.trigger(loginButton, 'tap');
+				});
+				autoLoginButton.classList[settings.autoLogin ? 'add' : 'remove']('mui-active')
+				autoLoginButton.addEventListener('toggle', function(event) {
+					setTimeout(function() {
+						var isActive = event.detail.isActive;
+						settings.autoLogin = isActive;
+						app.setSettings(settings);
+					}, 50);
+				}, false);
+				regButton.addEventListener('tap', function(event) {
+					$.openWindow({
+						url: 'reg.html',
+						id: 'reg',
+						preload: true,
+						show: {
+							aniShow: 'pop-in'
+						},
+						styles: {
+							popGesture: 'hide'
+						},
+						waiting: {
+							autoShow: false
+						}
+					});
+				}, false);
+				forgetButton.addEventListener('tap', function(event) {
+					$.openWindow({
+						url: 'forget_password.html',
+						id: 'forget_password',
+						preload: true,
+						show: {
+							aniShow: 'pop-in'
+						},
+						styles: {
+							popGesture: 'hide'
+						},
+						waiting: {
+							autoShow: false
+						}
+					});
+				}, false);
+				//
+				window.addEventListener('resize', function() {
+					oauthArea.style.display = document.body.clientHeight > 400 ? 'block' : 'none';
+				}, false);
+				//
+				var backButtonPress = 0;
+				$.back = function(event) {
+					backButtonPress++;
+					if (backButtonPress > 1) {
+						plus.runtime.quit();
+					} else {
+						plus.nativeUI.toast('');
+					}
+					setTimeout(function() {
+						backButtonPress = 0;
+					}, 1000);
+					return false;
+				};
+			});
+		}(mui, document));
+	</script>
+</html>
