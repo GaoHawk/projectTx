@@ -2,12 +2,12 @@
 * @Author: Administrator
 * @Date:   2016-10-12 14:22:21
 * @Last Modified by:   Administrator
-* @Last Modified time: 2016-10-12 14:23:13
+* @Last Modified time: 2016-10-15 16:23:36
 */
 
 var reg =`
 <div class="mui-content">
-  <form class="mui-input-group">
+  <form id="regForm" class="mui-input-group">
     <div class="mui-input-row">
       <label>账号</label>
       <input id='account' type="text" class="mui-input-clear mui-input" placeholder="请输入账号">
@@ -26,7 +26,7 @@ var reg =`
     </div>
   </form>
   <div class="mui-content-padded">
-    <button id='reg' class="mui-btn mui-btn-block mui-btn-primary">注册</button>
+    <button id='regC' class="mui-btn mui-btn-block mui-btn-primary">注册</button>
   </div>
   <div class="mui-content-padded">
     <p>注册真实可用，注册成功后的用户可用于登录，但是示例程序并未和服务端交互，用户相关数据仅存储于本地。</p>

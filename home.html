@@ -4,7 +4,7 @@
 
 	<head>
 		<meta charset="utf-8">
-		<title>Hello MUI</title>
+		<title>霸气游戏878.com</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -13,6 +13,12 @@
 		<link rel="stylesheet" href="css/Style.css">
 		<link rel="stylesheet" href="css/app.css">
 		<link rel="stylesheet" href="css/recommend.css">
+		<link rel="stylesheet" href="css/consult.css">
+		<link rel="stylesheet" href="css/gameDetail.css">
+		<link rel="stylesheet" href="css/userPage.css">
+		<script>
+			var check_lgB = true;
+		</script>
 		<script src="js/browser.js"></script>
 		<script src="js/jQuery-2.2.1.min.js"></script>
 		<script src="homePage.es5.js"></script>
@@ -21,7 +27,17 @@
 		<!-- <script src="secondPage.es5.js"></script> -->
 		<script src="userCenter.es5.js"></script>
 		<script src="userReg.es5.js"></script>
+		<script src="userPage.es5.js"></script>
 		<script src="recommend.es5.js"></script>
+		<script src="package.es5.js"></script>
+		<script src="gamePage.es5.js"></script>
+		<script src="gameDetail.es5.js"></script>
+		<script src="consult.es5.js"></script>
+		<script src="childPage.es5.js"></script>
+<!-- 		<script src="js/recommend.js"></script> -->
+
+		<link rel="stylesheet" href="Fonts/fonts.css">
+
 		<script type="text/babel">
 
 		</script>
@@ -82,7 +98,7 @@
 				display: inline-block;
 			}
 			a.logo_sy img{
-				width: 100%;
+				width: 72%;
 			}
 			.userdiv{
 				width:39%;
@@ -223,13 +239,603 @@
 				 display: inline-block;
 				 height: 72px; width: 72px;
 			 	 padding-top: 72px;
+		 	 	 background:url(images/gamePic/chan200.jpg) no-repeat;
 		 	 	 background:url(images/57e09a1a0e32d.png) no-repeat;
+		 	 	 background:url(images/baye.jpg) no-repeat;
+				 background-position: 50% 50%;
+				 background-size:contain ;
+			}
+			#navi li:nth-child(2) a{
+				background:url(images/gamePic/chan201.png);
+				background:url(images/57b42b5bf282c.png);
+				background:url(images/fentian.png);
+				 background-position: 50% 50%;
+				 background-size:contain ;
+			}
+			#navi li:nth-child(3) a{
+				background:url(images/gamePic/chan202.png);
+				background:url(images/57c5556621c1f.png);
+				background:url(images/fbys.png);
+				 background-position: 50% 50%;
+				 background-size:contain ;
+			}
+			#navi li:nth-child(4) a{
+				background:url(images/gamePic/chan203.png);
+				background:url(images/57e1f083a5a2a.png);
+				background:url(images/wdqk.png);
+				 background-position: 50% 50%;
+				 background-size:contain ;
+			}
+			#navi li:nth-child(5) a{
+				background:url(images/gamePic/chan204.png);
+				 background-position: 50% 50%;
+				 background-size:contain ;
+			}
+			#navi li:nth-child(5) a{
+				background:url(images/yjmt.png);
 				 background-position: 50% 50%;
 				 background-size:contain ;
 			}
 			#navi a span{
 				 display: block; color: #000;
 				 font-size: 14px;
+			}
+
+
+
+			/*开服状态 样式*/
+			ul,ol,ul{
+				list-style: none;
+			}
+			ul.kfdt_ul{
+				margin:0;
+				padding: 0;
+			}
+			.kfdt-ul{
+				margin-top: 1px;
+				overflow: hidden;
+			}
+			.kfdthead {
+				height: 31px;
+				background: url(images/kfheadbg.jpg) left center repeat-x;
+				padding: 0 2%;
+				list-style: none;
+			}
+			.kfdthead dl{
+				height:31px;
+				width: 100%;
+				margin:0;
+				display: inline-block;
+			}
+			.kfdthead dl .dd01 {
+				width: 10%;
+			}
+			.kfdthead dl .dd02 {
+				width: 58%;
+			}
+			.kfdthead dl .dd03 {
+				width: 12%;
+				margin-left:  2%;
+			}
+			.kfdthead dl .dd04 {
+				width: 10%;
+				margin-left: 8%;
+			}
+			.kfdtli {
+				background-color: #fff;
+				    padding: 2%;
+				    border-bottom: 1px solid #e4edef;
+				    list-style: none;
+			}
+			.kfdtli dl {
+				width: 100%;
+				overflow: hidden;
+				margin: 0;
+			}
+			.kfdtli dl dd {
+				float: left;
+				text-align: center;
+				color: #131313;
+				font-size: 14px;
+				vertical-align: middle;
+				margin: 0;
+			}
+			.kfdtli dl .dd01 {
+				width: 14%;
+				padding-top: 1.5%;
+			}
+			.kfdtli dl .dd02 {
+				width: 56%;
+				padding-top: 1.5%;
+			}
+			.kfdtli dl .dd03{
+				width: 8%;
+				margin-top: 1%;
+				margin-left: 2%;
+			}
+			.kfdtli dl .dd03 img,
+			.kfdtli dl .dd04 img{
+				width: 100%;
+				display: block;
+			}
+			.kfdtli dl .dd04{
+				width: 10%;
+				margin-left: 10%;
+			}
+			.kfdthead dl dd{
+				height: 31px;
+				line-height: 31px;
+				text-align: center;
+				color: #797c7d;
+				font-size: 14px;
+				float: left;
+				margin:0;
+			}
+
+			/*游戏排行*/
+			.ph_ul{
+				margin-top: 1px;
+				overflow: hidden;
+				margin-bottom: 2%;
+				padding: 0;
+			}
+			.phhead {
+				height: 31px;
+				    background: url(images/kfheadbg.jpg) left center repeat-x;
+				    padding: 0 2%;
+				list-style: none;
+			}
+			.phhead dl{
+				height: 31px;
+				width: 100%;
+				margin: 0;
+				display: inline-block;
+			}
+			.phhead dl dd{
+			    height: 31px;
+			    line-height: 31px;
+			    text-align: center;
+			    color: #797c7d;
+			    font-size: 14px;
+			    float: left;
+			    margin: 0;
+			}
+			.phhead dl .dd01{
+				width: 9%;
+			}
+			.phhead dl .dd02{
+				width: 50%;
+			}
+			.phhead dl .dd03{
+				width: 25%;
+			}
+			.phhead dl .dd04{
+				width: 16%;
+			}
+			.phli {
+				background-color: #fff;
+				    padding: 2%;
+				    border-bottom: 1px solid #e4edef;
+				    list-style: none;
+
+			}
+			.phli dl{
+				width: 100%;
+				overflow: hidden;
+				margin: 0;
+			}
+			.phli dl dd{
+				float: left;
+				font-size: 14px;
+				vertical-align: middle;
+				margin: 0;
+			}
+			.phli dl .dd01{
+				width: 9%;
+			}
+			.phli dl .dd01 img,
+			.phli dl .dd04 img{
+				width: 100%;
+				display: block;
+			}
+			.phli dl .dd02{
+				width: 42%;
+				margin-left: 10%;
+			}
+			a.yxphicon_a{
+				width: 20%;
+				overflow: hidden;
+			}
+			.db{
+				display: block;
+			}
+			.fl{
+				float: left;
+			}
+			a.yxphicon_a img{
+				width: 100%;
+			}
+			.yxph_r{
+				width: 75%;
+				margin-left: 5%;
+				overflow: hidden;
+				display: inline-block;
+			}
+			.yxphname_p{
+				height: 18px;
+				line-height: 18px;
+				color: #131313;
+				font-size: 12px;
+				text-align: left;
+				margin: 0
+			}
+			.yxphinfo_p{
+				height: 18px;
+				line-height: 18px;
+				color:#787e80;
+				font-size: 10px;
+				text-align: left;
+				margin: 0;
+			}
+			.phli dl .dd03{
+				width: 23%;
+				text-align: center;
+				color:#fd550b;
+				margin-top: 2%;
+			}
+
+			.phli dl .dd04{
+				width: 14%;
+				margin-left: 2%;
+			}
+
+			/*礼包领取*/
+			.libaoul{
+				width: 90%;
+				margin: 0 auto;
+				min-height: 400px;
+				overflow: hidden;
+				padding: 0;
+			}
+			.libaoul li{
+				margin-bottom: 0.6em;
+				border-radius: 3px;
+				border:1px solid #e1e1e1;
+				padding: 2%;
+				overflow: hidden;
+				background: #629721;
+				background-image: -webkit-linear-gradient(top, #ffffff, #dedede);
+				box-shadow: :inset 0px 0 1px #fff;
+				list-style: none;
+			}
+			.lbyxicon{
+				width: 25%;
+				overflow: hidden;
+			}
+			.lbyxicon img{
+				display: block;
+				width: 100%;
+			}
+			.lbinfo_div{
+				width: 48%;
+				margin: 3% 2% 0;
+			}
+			.lbyxname{
+				height: 24px;
+				color: #131313;
+				font-size: 90%;
+				line-height: 24px;
+				white-space: nowrap;
+			}
+			.lbyxinfo_p{
+				line-height: 18px;
+				color:#666;
+				font-size: 60%;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+			.lbyxinfo_p2{
+				line-height: 18px;
+				color: #ff0303;
+				font-size: 60%;
+				margin-top: 3px;
+			}
+			.jdtdi {
+				display: inline-block;
+				margin-right: 3px;
+				width: 60px;
+				height: 6px;
+				font-size: 0;
+				line-height: 6px;
+				overflow: hidden;
+				background: #9f9f9f;
+				background-image: -webkit-linear-gradient(top, #c3c3c3, #9f9f9f);
+			}
+			.pr {
+				position: relative;
+			}
+			.jdtdiv {
+				height: 6px;
+				font-size: 0;
+				line-height: 6px;
+				background: #27acef;
+				background-image: -webkit-linear-gradient(top, #00dfff, #27acef);
+			}
+			.jdword {
+				color: #ff0303;
+				font-size: 10px;
+			}
+			a.lbdl_a{
+				width: 22%;
+				margin-top: 13%;
+				color: #555758;
+				font-size: 13px;
+				text-align: center;
+				height: 36px;
+				line-height: 36px;
+				background-color: #fff;
+				border: 1px solid #c2d6db;
+				border-radius:5px;
+			}
+			.fr{
+				float: right;
+			}
+			a.ckgd_a{
+				width: 65%;
+				height: 18px;
+				line-height: 18px;
+				margin: 0 auto 18%;
+				padding-top: 18px;
+				text-align: center;
+				background: url(images/ckgdarrow.png) center top no-repeat;
+				background-size: 24px 14px;
+				color: #131313;
+				font-size: 100%;
+			}
+
+			/*游戏下载*/
+			.yxtopkuang{
+				padding: 3% 0;
+				border-bottom: 1px solid #ccc;
+				overflow: hidden;
+				margin-bottom: 3%;
+			}
+			.yxtop_ul {
+				width: 90%;
+				margin: 0 auto;
+				overflow: hidden;
+				padding: 0;
+			}
+			.yxtop_ul li {
+				width: 48.5%;
+				float: left;
+				margin-right: 3%;
+				margin-bottom: 3%;
+				overflow: hidden;
+				list-style: none;
+			}
+			.yxtop_ul li img{
+				width: 100%;
+				display: block;
+			}
+			.youxi_ul {
+				width: 90%;
+				margin: 0 auto;
+				padding: 0;
+			}
+			.youxi_ul li{
+				margin-bottom: 0.3em;
+				padding: 2%;
+				overflow: hidden;
+				list-style: none;
+			}
+			.youxiicon{
+				width: 25%;
+				overflow: hidden;
+			}
+			.youxiicon img{
+				display: block;
+				width: 100%;
+			}
+			.youxikuang_r{
+				width: 73%;
+				margin-left: 2%;
+				overflow: hidden;
+				padding-bottom: 2.5%;
+				border-bottom: 1px solid #e6e6e6;
+			}
+			.youxiinfo_div{
+				width: 73%;
+				overflow: hidden;
+				margin: 4% 0 0;
+			}
+			.youxiname{
+				height: 24px;
+				line-height: 24px;
+				overflow: hidden;
+			}
+			.youxiname a{
+				font-size: 90%;
+			}
+			.youxiinfo_p{
+				line-height: 18px;
+				color: #787e80;
+				font-size: 80%;
+			}
+			.youxiinfo_p2{
+				line-height: 18px;
+				color: #787a7a;
+				font-size: 60%;
+				margin-top: 1%;
+			}
+			.youxiinfo_p2 img{
+				height: 8px;
+				display: inline-block;
+			}
+			a.youxidl_a{
+				width: 26%;
+				margin-top: 7%;
+				overflow: hidden;
+			}
+			a.youxidl_a img{
+				width: 100%;
+			}
+
+			/*自定义轮播*/
+			.swiper-container {
+				margin: 0 auto;
+				position: relative;
+				overflow: hidden;
+				z-index: 1;
+				height: 130px;
+				top: 9px;
+			}
+			.swiper-container > .swiper-pagination {
+				bottom: 10px;
+				left: 0;
+				width: 100%;
+			}
+			.swiper-pagination {
+				position: absolute;
+				text-align: center;
+				transition: 300ms;
+				transform: translate3d(0,0,0);
+				z-index: 10;
+			}
+			.swiper-pagination-bullet{
+				width: 8px;
+				height: 8px;
+				display: inline-block;
+				border-radius: 100%;
+				background: #000
+				opacity:0.2;
+
+			}
+			.swiper-pagination-bullet.swiper-pagination-bullet-active{
+				opacity: 1;
+				background: #007aff;
+			}
+			.swiper-wrapper{
+				position: relative;
+				width: 100%;
+				height: 100%;
+				z-index: 1;
+				display: -webkit-flex;
+				display: -moz-flex;
+				display: -ms-flex;
+				display: -o-flex;
+				display: flex;
+				transform-style: preserve-3d;
+				transition-property: transform;
+				box-sizing: content-box;
+			}
+			.sx-table-row{
+				position: relative;
+				width: 49%;
+				padding: 0;
+				margin: 0;
+				border:  0;
+				box-sizing: border-box;
+				border-collapse: collapse;
+				display: table;
+				table-layout: fixed;
+				margin-right: 20px;
+			}
+			.sx-table-pic{
+				width: 80%;
+				min-width: 95px;
+			}
+			.sx-table-pic .sx-product-image{
+				max-height: 170px;
+				padding: 0;
+				margin: 0;
+				border:0;
+				display: inline-block;
+				max-width: 110%;
+			}
+
+			/*礼包领取提示*/
+			.xskdiv {
+				background-color: #f2f2f2;
+				width: 280px;
+				height: 140px;
+				position: fixed;
+				left: 50%;
+				top: 50%;
+				margin-left: -140px;
+				margin-top: -120px;
+				border-radius: 5px;
+				z-index: 10000;
+			}
+			.pa{
+				position: absolute;
+			}
+			.dn{
+				display: none;
+			}
+			a.closebtn{
+				width: 20px;
+				height: 20px;
+				line-height: 20px;
+				text-align: center;
+				color: #383838;
+				font-size: 20px;
+				right: 5px;
+				top: 5px;
+				font-family: Verdana, Geneva, sans-serif;
+			}
+			.lbxlh_p{
+				text-align: center;
+				line-height: 30px;
+				color: #383838;
+				font-size: 14px;
+				margin-top: 40px;
+				padding: 0 10px;
+			}
+			.wxtips_p{
+				text-align: center;
+				line-height: 30px;
+				font-size: 12px;
+				margin-top: 5px;
+				color: #f00;
+			}
+
+			/*底部栏图片*/
+			.customIc{
+				background: url(images/home/game.png) no-repeat;
+				background-size: 55% 80%;
+				background-position: 15px;
+				transform: scale(0.799);
+			}
+			.customIc.mui-active{
+				background: url(images/home/gameAc.png) no-repeat;
+				background-size: 55% 80%;
+				background-position: 15px;
+				transform: scale(0.799);
+			}
+			.mui-bar-tab .mui-tab-item.mui-active{
+				color:#3796ea;
+			}
+			.customlb{
+				background: url(images/home/libao.png) no-repeat;
+				background-size: 55% 80%;
+				background-position: 14px;
+				transform: scale(0.821);
+			}
+			.customlb.mui-active{
+				background: url(images/home/libaoAc.png) no-repeat;
+				background-size: 55% 80%;
+				background-position: 14px;
+				transform: scale(0.821);
+			}
+			.custom-Ic{
+				background: url(images/home/phone.png) no-repeat;
+				height: 75%;
+				background-size: 45% 85%;
+
+				position: relative;
+				left: 22px
 			}
 		</style>
 	</head>
@@ -238,7 +844,7 @@
 		<header class="mui-bar mui-bar-nav">
 			<div id="mainPage" style="display: inline-block;">
 				<a class="mui-pull-left logo_sy db pa">
-					<img src="images/54ab7990ba321.png" >
+					<img src="images/logo.png" >
 				</a>
 				<div class="userdiv pa">
 					<a class="mui-icon mui-icon-contact mui-tab-item" href="#userCenter">
@@ -258,27 +864,33 @@
 		</header>
 		<nav class="mui-bar mui-bar-tab custom-nav-shadow" >
 			<a class="mui-tab-item mui-active" href="#tabbar">
-				<span class="mui-icon mui-icon-home"></span>
-				<span class="mui-tab-label">首页</span>
+				<span class="mui-icon mui-icon-home" style="transform: scale(1.1);"></span>
+				<span class="mui-tab-label" >首页</span>
 			</a>
-			<a class="mui-tab-item" href="#tabbar-with-chat">
-				<span class="mui-icon mui-icon-upload"></span>
-				<span class="mui-tab-label">礼包</span>
+			<a class="mui-tab-item" href="#tabbar-with-chat" >
+								<i class="iconfont" style="
+				    font-size: 26px;
+				    position: relative;
+				    top: 4px;">&#xe636;</i>
+				<div class="mui-tab-label" style="font-size: 13px;">礼包</div>
 			</a>
 			<a class="mui-tab-item" href="#tabbar-with-contact">
-				<span class="mui-icon mui-icon-pengyouquan"></span>
-				<span class="mui-tab-label">游戏</span>
+				<i class="iconfont" style="
+    font-size: 26px;
+    position: relative;
+    top: 4px;">&#xe67e;</i>
+				<div class="mui-tab-label" style="font-size: 13px;">游戏</div>
 			</a>
-			<a class="mui-tab-item" href="#tabbar-with-map">
+			<a class="mui-tab-item" href="#tabbar-with-map" style="transform: scale(1.1);">
 				<span class="mui-icon mui-icon-chatbubble"></span>
-				<span class="mui-tab-label">咨询</span>
+				<span class="mui-tab-label">资讯</span>
 			</a>
-			<a class="mui-tab-item" href="#tabbar-recommend">
+			<a class="mui-tab-item" href="#tabbar-recommend" style="transform: scale(1.1);">
 				<span class="mui-icon mui-icon-star"></span>
 				<span class="mui-tab-label">推荐</span>
 			</a>
 		</nav>
-		<div class="mui-content">
+		<div class="mui-content" style="background-color: #fdfdfd;">
 			<div id="userCenter" class="mui-control-content">
 				<script>
 					$("#userCenter").append(userHtml);
@@ -289,6 +901,7 @@
 					$("#userReg").append(reg);
 				</script>
 			</div>
+
 			<div id="tabbar" class="mui-control-content mui-active">
 			<script>
 				$("#tabbar").append(html1);
@@ -297,7 +910,7 @@
 			</div>
 			<div id="tabbar-with-chat" class="mui-control-content">
 				<script>
-					$("#tabbar-with-chat").append(html2);
+					$("#tabbar-with-chat").append(package);
 				</script>
 
 			</div>
@@ -308,22 +921,60 @@
 			</div>
 			<div id="tabbar-with-contact" class="mui-control-content">
 				<script>
-					$("#tabbar-with-contact").append(html3);
+					$("#tabbar-with-contact").append(gPage);
 				</script>
 			</div>
 			<div id="tabbar-with-map" class="mui-control-content">
 				<script>
-					$("#tabbar-with-map").append(html1);
+					$("#tabbar-with-map").append(consult);
+					   var strForm ="<li class='mui-table-view-cell'><a href='#tabbar-childPage' class='mui-tab-item news-a' style='display: inline-block'> 《洛神域》公测355服“贪狼破军”10月14日10:00开启！</a> <span class='datespan'>10.13</span>  </li>"
+			              var strForm1 ="<li class='mui-table-view-cell'><a href='#tabbar-childPage' class='mui-tab-item news-a' style='display: inline-block'> 《弑天刃》62服“宣化承流”10月14日10:00 火爆开启！！！</a> <span class='datespan'>10.11</span></li>"
+			              var strForm2 ="<li class='mui-table-view-cell'><a href='#tabbar-childPage' class='mui-tab-item news-a' style='display: inline-block'>《九天仙境》193服“水榭听香”10月14日10：00火爆开启！！！</a> <span class='datespan'>8.7</span>  </li>"
+
+
+
+
 				</script>
 			</div>
+			<div id="tabbar-game-detail" class="mui-control-content">
+				<script>
+					$("#tabbar-game-detail").append(gDetail);
+				</script>
+			</div>
+
+			<div id="user_Page" class="mui-control-content">
+				<script>
+					$("#user_Page").append(userPage);
+				</script>
+			</div>
+
+		<div id="tabbar-childPage" class="mui-control-content">
+			<script>
+				$("#tabbar-childPage").append(childPage);
+			</script>
+			</div>
+
 		</div>
+		<div class="xskdiv pa dn" id="takecard" ><a href="javascript:;" class="closebtn pa">X</a><p class="lbxlh_p">请先登录，再领取礼包</p><p class="wxtips_p">温馨提示：长按礼包序列号即可复制</p></div>
 	</body>
 	<script src="js/MUI.min.js"></script>
 	<script src="js/mui.enterfocus.js"></script>
+	<!-- <script src="js/packagePullToRe.js"></script> -->
 	<script src="js/app.js"></script>
+	<script src="js/lslider-gxl.js"></script>
 	<script>
 		mui.init({
-			swipeBack:true //
+			swipeBack:true,
+			// pullRefresh: {
+			//   container: '#pullrefresh',
+			//   down: {
+			//     callback: pulldownRefresh
+			//   },
+			//   up: {
+			//     contentrefresh: '正在加载...',
+			//     callback: pullupRefresh
+			//   }
+			// } //
 		});
 
 		// var gallery = mui('.mui-slider');
@@ -337,14 +988,26 @@
 		var userHeader = $("header.mui-bar.mui-bar-nav");
 
 		var abtns = $("a.mui-tab-item");
-		var query = abtns[2].hash.slice(1);
-		var title = "pjax" + query;
+
+		var query = "tabbar";
+		var title = "霸气游戏878.com" ;//+ query;
 		document.title = title;
 		history.pushState({ title: title }, title, location.href.split("?")[0] + "?" + query);
-		var eleMenus = abtns.bind("tap", function(event){
-			console.log($(this)[0].hash);
-			var query = $(this)[0].hash.slice(1);
-			var title = "pjax" + query;
+		// 闭包 创建事件绑定函数
+		var oEvent = {};
+		(function(){
+		    var addEvent = function(){ /*代码的实现省略了*/ };
+		    function removeEvent(){}
+
+		    oEvent.addEvent = addEvent;
+		    oEvent.removeEvent = removeEvent;
+		})();
+
+
+		var changeHash = function(that){
+			console.log($(that)[0].hash);
+			var query = $(that)[0].hash.slice(1);
+			var title = "霸气游戏878.com" ;//+ query;
 			document.title = title;
 
 
@@ -353,7 +1016,7 @@
 					$(abtns[i]).removeClass('mui-active');
 				}
 			}
-			$(this).addClass('mui-active');
+			$(that).addClass('mui-active');
 			if (event) {
 			for (var j = 0; j < eleContents.length; j++) {
 				if(eleContents[j].id == query){
@@ -366,8 +1029,14 @@
 			}
 			  history.pushState({ title: title }, title, location.href.split("?")[0] + "?" + query);
 			}
-			return false;
+		}
+		var eleMenus = abtns.bind("tap",function(event){
+			changeHash(this);
 		});
+		// var eleMenus = abtns.bind("tap", function changeHash(event){
+
+		// 	// return false;
+		// });
 
 		var fnHashTrigger = function(target){
 			var query = location.href.split("?")[1], eleTarget = target || null;
@@ -378,12 +1047,14 @@
 			  //   history.replaceState(null, document.title, location.href.split("#")[0] + "?" + eleTarget.href.split("?")[1]) + location.hash;
 			  //   fnHashTrigger(eleTarget);
 			  // }
-			  eleTarget = abtns[2];
+
+
 			  console.log(eleTarget);
-			  history.replaceState(null,document.title,location.href.split("#")[0] + "?"  + eleTarget.hash.slice(1));
+			  history.replaceState(null,document.title,location.href.split("#")[0] + "?tabbar");
 			  fnHashTrigger(eleTarget);
 			} else {
 				console.log(abtns);
+
 				// console.log(query);
 				if(query.indexOf('user') > -1){
 					console.log("userPage");
@@ -396,21 +1067,43 @@
 					$("#userPage").hide();
 				}
 				for (var i = 0; i < eleContents.length; i++) {
-					if(eleContents[i].id == query){
-						// console.log(eleContents[i]);
+					//用户 登陆成功跳转 页面 方法
+					if(eleTarget !==null){
 						for (var j = 0; j < abtns.length; j++) {
 							if($(abtns[j]).hasClass('mui-active') ){
 								$(abtns[j]).removeClass('mui-active');
 							}
-							if(abtns[j].hash.slice(1) == query){
-								$(abtns[j]).addClass('mui-active');
-							}
 						}
-
-						$(eleContents[i]).show();
+						if(eleContents[i].id ==eleTarget){
+							$(eleContents[i]).show();
+							$(window).scrollTop(0);
+							var name = "用户中心";
+							history.pushState({ title: name },document.title,location.href.split("?")[0] + "?" + eleTarget);
+						}else{
+							$(eleContents[i]).hide();
+						}
 					}else{
-						$(eleContents[i]).hide();
+						// 页面切换转变hash
+						if(eleContents[i].id == query){
+							// console.log(eleContents[i]);
+							for (var j = 0; j < abtns.length; j++) {
+								if($(abtns[j]).hasClass('mui-active') ){
+									$(abtns[j]).removeClass('mui-active');
+								}
+								if(abtns[j].hash.slice(1) == query){
+									$(abtns[j]).addClass('mui-active');
+
+								}
+							}
+							$(window).scrollTop(0);
+							$(eleContents[i]).show();
+						}else{
+							$(eleContents[i]).hide();
+
+						}
 					}
+
+
 				}
 				// if(eleTarget){
 				// 	console.log(4);
@@ -431,11 +1124,15 @@
 			}
 		}
 
+		//初始默认添加
 		if (history.pushState) {
 		  window.addEventListener("popstate", function() {
 		    fnHashTrigger();
-		  });
 
+		  });
+		  // if(qn<=0){
+		  // 	location.href = location.href.split("?")[0];
+		  // }
 		  fnHashTrigger();
 		}
 
@@ -449,188 +1146,111 @@
 			$("#userPage").show();
 		});
 
+		//取消组件下a标签默认跳转问题
+		abutton = $("a.no-tab");
+		console.log(abutton);
+		abutton.on("click",function(event){
+			console.log("click");
+			return false;
+		},false);
 
+		// 礼包领取
+		var closebtn = $("a.closebtn");
+		var gift = $("#takecard");
+		closebtn.click(function(event) {
+			gift.hide();
+		});
+		function takeGift(id,ele){
+			var scrollT = $(window).scrollTop();
+			console.log(scrollT);
+			gift.css('top', scrollT+240);
+			gift.show();
+		}
 
-		(function($, doc) {
-			console.log(doc);
-			$.init({
-				statusBarBackground: '#f7f7f7'
-			});
-			$.plusReady(function() {
-				plus.screen.lockOrientation("portrait-primary");
-				var settings = app.getSettings();
-				var state = app.getState();
-				var mainPage = $.preload({
-					"id": 'main',
-					"url": 'main.html'
-				});
-				var main_loaded_flag = false;
-				mainPage.addEventListener("loaded",function () {
-					main_loaded_flag = true;
-				});
-				var toMain = function() {
+		//礼包和游戏简介切换
+		var detailBtn = $(".yxjjlbtop_div span");
+		var dContent = $("div.jjword.jj");
+		var lbContent = $("div.yxlb");
+		detailBtn.click(function(event) {
+			// console.log(this);
+			for (var i = 0; i < detailBtn.length; i++) {
+				$(detailBtn[i]).removeClass('selected');
+			}
+			$(this).addClass('selected');
+			var detalId = $(this).attr('id');
+			if(detalId == "jj"){
+				lbContent.hide();
+				dContent.show();
+			} else if(detalId=="lb"){
+				lbContent.show();
+				dContent.hide();
+			}
+		});
 
-					var id = setInterval(function () {
-						if(main_loaded_flag){
-							clearInterval(id);
-							$.fire(mainPage, 'show', null);
-							mainPage.show("pop-in");
-						}
-					},20);
-				};
-				//
-				if (settings.autoLogin && state.token && settings.gestures) {
-					$.openWindow({
-						url: 'unlock.html',
-						id: 'unlock',
-						show: {
-							aniShow: 'pop-in'
-						},
-						waiting: {
-							autoShow: false
-						}
-					});
-				} else if (settings.autoLogin && state.token) {
-					toMain();
-				} else {
-					app.setState(null);
-					//
-					var authBtns = ['qihoo', 'weixin', 'sinaweibo', 'qq']; //
-					var auths = {};
-					var oauthArea = doc.querySelector('.oauth-area');
-					plus.oauth.getServices(function(services) {
-						for (var i in services) {
-							var service = services[i];
-							auths[service.id] = service;
-							if (~authBtns.indexOf(service.id)) {
-								var isInstalled = app.isInstalled(service.id);
-								var btn = document.createElement('div');
-								//
-								btn.setAttribute('class', 'oauth-btn' + (!isInstalled && service.id === 'weixin' ? (' disabled') : ''));
-								btn.authId = service.id;
-								btn.style.backgroundImage = 'url("images/' + service.id + '.png")'
-								oauthArea.appendChild(btn);
-							}
-						}
-						$(oauthArea).on('tap', '.oauth-btn', function() {
-							if (this.classList.contains('disabled')) {
-								plus.nativeUI.toast('');
-								return;
-							}
-							var auth = auths[this.authId];
-							var waiting = plus.nativeUI.showWaiting();
-							auth.login(function() {
-								waiting.close();
-								plus.nativeUI.toast("");
-								auth.getUserInfo(function() {
-									plus.nativeUI.toast("");
-									var name = auth.userInfo.nickname || auth.userInfo.name;
-									app.createState(name, function() {
-										toMain();
-									});
-								}, function(e) {
-									plus.nativeUI.toast("" + e.message);
-								});
-							}, function(e) {
-								waiting.close();
-								plus.nativeUI.toast("" + e.message);
-							});
-						});
-					}, function(e) {
-						oauthArea.style.display = 'none';
-						plus.nativeUI.toast("" + e.message);
-					});
+		// 登陆后，用户中心
+
+		var lg_Btn=$("a#logA");
+		var logForm = $(".mui-input-group")[0];
+		lg_Btn.click(function(event) {
+			console.log(this);
+			var aa = $(this).next();
+			mui("#login-form input").each(function() {
+				if(!this.value || this.value.trim() == "") {
+				    var label = this.previousElementSibling;
+				    $("h4.waring").show();
+				    // alert(label.innerText + "登陆信息不能为空");
+				   check_lgB = false;
+				    // return false;
+				}else{
+					check_lgB = true;
 				}
-				// close splash
-				setTimeout(function() {
-					// splash
-					plus.navigator.closeSplashscreen();
-				}, 600);
-				//
-				var loginButton = doc.getElementById('login');
-				var accountBox = doc.getElementById('account');
-				var passwordBox = doc.getElementById('password');
-				var autoLoginButton = doc.getElementById("autoLogin");
-				var regButton = doc.getElementById('reg');
-				regButton.addEventListener("tap",function(event){
-					 console.log(event)
-				});
-				var forgetButton = doc.getElementById('forgetPassword');
-				loginButton.addEventListener('tap', function(event) {
-					var loginInfo = {
-						account: accountBox.value,
-						password: passwordBox.value
-					};
-					app.login(loginInfo, function(err) {
-						if (err) {
-							plus.nativeUI.toast(err);
-							return;
-						}
-						toMain();
-					});
-				});
-				$.enterfocus('#login-form input', function() {
-					$.trigger(loginButton, 'tap');
-				});
-				autoLoginButton.classList[settings.autoLogin ? 'add' : 'remove']('mui-active')
-				autoLoginButton.addEventListener('toggle', function(event) {
-					setTimeout(function() {
-						var isActive = event.detail.isActive;
-						settings.autoLogin = isActive;
-						app.setSettings(settings);
-					}, 50);
-				}, false);
-				regButton.addEventListener('tap', function(event) {
-					$.openWindow({
-						url: 'reg.html',
-						id: 'reg',
-						preload: true,
-						show: {
-							aniShow: 'pop-in'
-						},
-						styles: {
-							popGesture: 'hide'
-						},
-						waiting: {
-							autoShow: false
-						}
-					});
-				}, false);
-				forgetButton.addEventListener('tap', function(event) {
-					$.openWindow({
-						url: 'forget_password.html',
-						id: 'forget_password',
-						preload: true,
-						show: {
-							aniShow: 'pop-in'
-						},
-						styles: {
-							popGesture: 'hide'
-						},
-						waiting: {
-							autoShow: false
-						}
-					});
-				}, false);
-				//
-				window.addEventListener('resize', function() {
-					oauthArea.style.display = document.body.clientHeight > 400 ? 'block' : 'none';
-				}, false);
-				//
-				var backButtonPress = 0;
-				$.back = function(event) {
-					backButtonPress++;
-					if (backButtonPress > 1) {
-						plus.runtime.quit();
-					} else {
-						plus.nativeUI.toast('');
-					}
-					setTimeout(function() {
-						backButtonPress = 0;
-					}, 1000);
-					return false;
-				};
 			});
-		}(mui, document));
+			if(check_lgB){
+				console.log("checke");
+			    fnHashTrigger("user_Page");
+			}
+
+		});
+
+		// 注册验证
+		var regBtn = $("#regC");
+
+		console.log(regBtn);
+		var regForm = $(".mui-input-group")[1];
+		regBtn.click(function(event) {
+			mui("#regForm input").each(function() {
+				if(!this.value || this.value.trim() == "") {
+				    var label = this.previousElementSibling;
+				    mui.alert(label.innerText + "注册信息不能为空");
+				    check_lgB = false;
+				    return false;
+				}else{
+					check_lgB = true;
+				}
+			});
+			if(check_lgB){
+			    mui.alert('注册成功!')
+			}
+		});
+		// 首页跳转游戏
+		var toGame =$("button.cforgame");
+		toGame.click(function(event) {
+			console.log("toGame");
+			fnHashTrigger("tabbar-with-contact");
+		});
+
+
+		// 任何跳转 都返回页面顶部
+		$("a.mui-tab-item").on('tap',  function(event) {
+			 // console.log("fei");
+			 $(window).scrollTop(0);
+			/* Act on the event */
+		});
+		$("#load_more").click(function(){
+			$(".add_list").append(strForm).append(strForm1).append(strForm2);
+			$("ul.add_list li a.mui-tab-item").bind("tap",function(event){
+				changeHash(this);
+			});
+		});
 	</script>
 </html>
