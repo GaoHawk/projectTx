@@ -1,0 +1,192 @@
+/*
+* @Author: Administrator
+* @Date:   2016-10-15 13:38:57
+* @Last Modified by:   Administrator
+* @Last Modified time: 2016-10-15 15:55:16
+*/
+.uctopkuang_div{
+  width: 94%;
+  overflow: hidden;
+  margin: 2% auto;
+  padding: 2% 0;
+}
+.uc_usericon{
+  width: 18%;
+  overflow: hidden;
+}
+.uc_usericon img{
+  display: block;
+  width: 100%;
+}
+.username_div{
+  width: 58%;
+  overflow: hidden;
+  padding: 1% 0 0;
+  margin: 0 2%;
+}
+.yhm_p{
+  height: 24px;
+  line-height: 24px;
+  color: #131313;
+}
+.yhm_p2{
+  height: 24px;
+  line-height: 24px;
+  color: #787979;
+  font-size: 18px;
+  margin-top:20px;
+}
+a.quitbtn_a{
+  width: 18%;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  border: 1px solid #ffae3f;
+  font-size: 14px;
+  border-radius: 5px;
+  margin-top: 4%;
+}
+.zjlbtop_div{
+  height: 36px;
+  border-bottom: 2px solid #6ddeff;
+  border-top: 1px solid #f2f2f2;
+  background:  url(../images/ustopbg.jpg) left center
+      repeat-x;
+  padding-left: 2%;
+  padding-top: 1%;
+}
+.zjlbhead{
+  height: 30px;
+  line-height: 30px;
+  width: 45%;
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+  background: #6ddeff;
+  border-radius: 5px 5px 0 0;
+}
+.zjlb_ul {
+  overflow: hidden;
+  height: 160px;
+  margin-bottom: 1%;
+  padding: 0;
+  margin: 0;
+}
+.zjlb_ul li {
+  height: 30px;
+  border-bottom: 1px solid #e4edef;
+  padding: 0 4%;
+  list-style: none;
+}
+#libao_content li .ell {
+   overflow: hidden;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+}
+.zjlbspan02{
+  display: inline-block;
+  width: 50%;
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  color: #131313;
+}
+.zjlbspan04{
+  display: inline-block;
+  width: 35%;
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  color: #131313;
+  text-align: center;
+}
+.zjlbspan05 {
+  display: inline-block;
+  width: 15%;
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  color: #949494;
+  text-align: center;
+
+}
+.zjlbtop_div{
+  height: 36px;
+  border-bottom: 2px solid #6ddeff;
+  border-top: 1px solid #f2f2f2;
+  background:  url(../images/ustopbg.jpg) left center repeat-x;
+  padding-left: 2%;
+  padding-top: 1%;
+}
+.zjlbhead{
+  height: 30px;
+  line-height: 30px;
+  width: 45%;
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+  background: #6ddeff;
+  border-radius: 5px 5px 0 0;
+}
+.rmyxtjtop_div{
+  padding: 3% 0;
+  overflow: hidden;
+  margin-bottom: 10%;
+}
+.rmyxlb_ul {
+  width: 94%;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0;
+}
+.rmyxlb_ul li{
+  float: left;
+  width: 48.6%;
+  margin-right: 2%;
+  margin-bottom: 4%;
+  background: #f8faf9;
+  border: 1px solid #dbdbdb;
+  padding: 1%;
+  overflow: hidden;
+  border-radius: 5px;
+  list-style: none;
+}
+.rmyxicon{
+  width: 30%;
+  overflow: hidden;
+}
+.rmyxicon img{
+  display: block;
+  width: 100%;
+}
+.rmyxcon_right{
+  width: 65%;
+  overflow: hidden;
+  margin-left: 5%;
+}
+.rmyxtj_pl {
+  height: 18px;
+  line-height: 18px;
+  color: #131313;
+  font-size: 12px;
+}
+.rmyxtj_p2{
+  height: 18px;
+  line-height: 18px;
+  color: #787e80;
+  font-size: 9px;
+  width: 100%;
+  white-space: nowrap;
+}
+a.rmyxtj_a{
+  width: 65%;
+  height: 18px;
+  line-height: 18px;
+  border: 1px solid #fdc271;
+  background-color: #fff;
+  color: #fdc271;
+  font-size: 12px;
+  text-align: center;
+  border-radius: 5px;
+  margin: 0 auto;
+}

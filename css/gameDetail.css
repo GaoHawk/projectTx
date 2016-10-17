@@ -1,0 +1,131 @@
+/*
+* @Author: Administrator
+* @Date:   2016-10-15 10:46:46
+* @Last Modified by:   Administrator
+* @Last Modified time: 2016-10-15 11:38:24
+*/
+.youxijj_ul {
+  width: 90%;
+  margin: 0 auto;
+  padding: 0;
+}
+.youxijj_ul li{
+  margin-bottom: 0.3em;
+  padding: 2%;
+  overflow: hidden;
+  list-style: none;
+}
+.youxijjicon{
+  width: 25%;
+  overflow: hidden;
+}
+.youxijjicon img{
+  display: block;
+  width: 100%;
+}
+.youxijjkuang_r{
+   width: 73%;
+   margin-left: 2%;
+   overflow: hidden;
+   padding-bottom: 2.5%;
+}
+.youxijjinfo_div{
+  width: 73%;
+  overflow: hidden;
+  margin: 4% 0 0;
+}
+.youxijjname {
+  height: 24px;
+  color: #131313;
+  font-size: 90%;
+  line-height: 24px;
+  padding: 0;
+  margin: 0;
+}
+.youxijjinfo_p{
+  line-height: 18px;
+  color: #787e80;
+  font-size: 72%;
+  padding: 0;
+  margin: 0;
+}
+.youxijjinfo_p2{
+  line-height: 18px;
+  color: #787a7a;
+  font-size: 60%;
+  margin-top: 1%;
+  padding: 0;
+  margin: 0;
+}
+.youxijjinfo_p2 img{
+  height: 8px;
+  display: inline-block;
+}
+a.youxijjdl_a {
+   width: 26%;
+   margin-top: 7%;
+   overflow: hidden;
+}
+a.youxijjdl_a img{
+  width: 100%;
+}
+.clear{
+  clear: both;
+  content:".";
+  display: block;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  visibility: hidden;
+}
+.yxjjlbtop_div{
+  height: 36px;
+  border-bottom: 2px solid #6ddeff;
+  border-top: 1px solid #f2f2f2;
+  background: url(../images/ustopbg.jpg) left
+      center repeat-x;
+  padding-top: 1%;
+
+}
+.yxjjlbtop_div .selected{
+  background: #6ddeff;
+  color:#fff;
+}
+.yxjjlbtop_div .yxjjlbhead {
+  height: 30px;
+  line-height: 30px;
+  width: 30%;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 5px 5px 0 0;
+  margin-left: 2%;
+}
+.yxjjlbtop_div .yxjjlbhead {
+
+}
+#tab-content{
+  margin-bottom: 18%;
+  overflow: hidden;
+  width: 100%;
+}
+.jj_banner{
+  margin-top: 2%;
+  overflow: hidden;
+}
+.jjword{
+  color: #555758;
+  font-size: 11px;
+  line-height: 18px;
+  padding: 1% 2% 2%;
+}
+#tab-content .hide{
+  display: none;
+  overflow: hidden;
+}
+.libaoul{
+  width: 90%;
+  margin: 0 auto;
+  min-height: 400px;
+  overflow: hidden;
+  padding: 0;
+}
