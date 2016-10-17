@@ -28,3 +28,38 @@
     -webkit-box-shadow: 0 0 1px 1px rgba(130,130,130,.7);
     box-shadow: 0 0 1px 1px rgba(130,130,130,.7);
 */}
+.gay-btn{
+    color: #fff;
+    background-color: red;
+    border: red;
+    border-radius: 9px;
+}
+/*.mui-btn, button, input[type=button], input[type=reset], input[type=submit] {
+    position: relative;
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42;
+    color: white;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: top;
+    cursor: pointer;
+    background-color: #0099ff;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    -webkit-transition: all;
+    transition: all;
+    -webkit-transition-timing-function: linear;
+    transition-timing-function: linear;
+    -webkit-transition-duration: .2s;
+    transition-duration: .2s;
+}
+*/
